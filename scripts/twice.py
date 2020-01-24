@@ -14,6 +14,13 @@ def cb2(message):
 def cb3(message):
     rospy.loginfo(message.data)
 
+def cb4(message):
+    global x
+    x = message.data
+
+def cb5(message):
+    y = message.data
+
 if __name__ == '__main__':
     rospy.init_node('twice')
     sub = rospy.Subscriber('count_up', Int32, cb)
