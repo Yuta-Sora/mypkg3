@@ -26,7 +26,7 @@
     ・3.<-> を入力後指示に従って数値を打つと　tiwce.py側で入力された式と答えが表示される（差）  
     ・4.rostopic echo /count_up で送信回数が表示される  
     ・5.rostopic echo /count_2 で送信毎に Hello World が表示される  
-##デモ動画  
+## デモ動画  
 https://www.youtube.com/watch?v=N04XVfgjIwE
 ## License  
 This software is released under the BSD 2-Clause "Simplified" License, see LICENSE.
