@@ -27,7 +27,7 @@ def input_process():
     return ss
 
 rospy.init_node('count')
-pub = rospy.Publisher('count_up', Int32, queue_size=1)
+pub = rospy.Publisher('count_up', Int32, queue_size=10)
 pub2 = rospy.Publisher('count_2', String, queue_size=10)
 pub3 = rospy.Publisher('count_3', String, queue_size=10)
 pub4 = rospy.Publisher('count_4', Float32, queue_size=10)
@@ -47,6 +47,13 @@ while not rospy.is_shutdown():
         print('input x :x + y')
         num1 = input_process()
         print('input y :x + y')
+        num2 = input_process()
+        pub4.publish(num1)
+        pub5.publish(num2)
+    elif word2 == '<->':
+        print('input x :x - y')
+        num1 = input_process()
+        print('input y :x - y')
         num2 = input_process()
         pub4.publish(num1)
         pub5.publish(num2)
